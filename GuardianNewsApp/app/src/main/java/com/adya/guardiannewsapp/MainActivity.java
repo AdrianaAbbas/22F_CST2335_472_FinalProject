@@ -3,7 +3,6 @@ package com.adya.guardiannewsapp;
 
 import android.app.SearchManager;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;

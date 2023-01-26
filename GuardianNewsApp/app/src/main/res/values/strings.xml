@@ -23,6 +23,8 @@
     <string name="about_dets_content">Press the Url to open up the article in full</string>
     <string name="dets_title">Article Details</string>
     <string name="web_url_instructions">Click the url bellow to access the article</string>
+    <string name="unchecked_text">Change me</string>
+    <string name="checked_text">Change me back</string>
 
     <string-array name="navigation_drawer_items_array">
         <item>Search Articles</item>

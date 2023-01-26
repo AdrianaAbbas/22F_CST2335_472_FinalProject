@@ -23,4 +23,6 @@
     <string name="about_dets_content">Appuyez sur l\'URL pour ouvrir l\'article en entier</string>
     <string name="dets_title">Détails de l\'article</string>
     <string name="web_url_instructions">Cliquez sur l\'url ci-dessous pour accéder à l\'article</string>
+    <string name="unchecked_text">Change me back</string>
+    <string name="checked_text">Change me</string>
 </resources>

@@ -6,6 +6,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SearchFragment">
 
+
+    <Button
+        android:id="@+id/sharedPrefButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
     <Button
         android:id="@+id/search_button"
         app:layout_constraintStart_toStartOf="parent"
