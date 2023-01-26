@@ -39,6 +39,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

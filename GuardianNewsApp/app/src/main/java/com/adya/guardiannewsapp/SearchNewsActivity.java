@@ -7,10 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-
-import com.adya.guardiannewsapp.R;
 
 public class SearchNewsActivity extends AppCompatActivity {
 
@@ -18,15 +14,9 @@ public class SearchNewsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_news);
-        this.setTitle("Search Articles");
+        this.setTitle(getString(R.string.search_articles_title));
 
-        onSearchRequested();
-
-        Button button = findViewById(R.id.search_button);
-        button.setOnClickListener(view -> {
-            onSearchRequested();
-        });
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
@@ -40,12 +30,14 @@ public class SearchNewsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.search_menu_info) {
             new AlertDialog.Builder(this)
-                    .setTitle("Search Engine")
-                    .setMessage("You closed the prompt box? No worries press the button in the center!")
+                    .setTitle(R.string.about_search_title)
+                    .setMessage(R.string.about_search_content)
                     .setPositiveButton(android.R.string.ok, null)
                     .setIcon(android.R.drawable.ic_dialog_info)
                     .show();
             return true;
+        } else if(item.getItemId() == android.R.id.home) {
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

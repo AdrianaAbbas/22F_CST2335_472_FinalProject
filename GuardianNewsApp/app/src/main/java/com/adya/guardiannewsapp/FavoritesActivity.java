@@ -28,13 +28,15 @@ public class FavoritesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorites);
-        this.setTitle("Your Favorites");
+        this.setTitle(getString(R.string.fav_title));
 
         View parentLayout = findViewById(R.id.constraintLayout);
         newsAdapter = new NewsAdapter(this, true, parentLayout);
         newsList = findViewById(R.id.newsList);
         newsList.setAdapter(newsAdapter);
         newsAdapter.setNews(newsAdapter.getFavoriteNews());
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
@@ -48,12 +50,14 @@ public class FavoritesActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.favorites_menu_info) {
             new AlertDialog.Builder(this)
-                    .setTitle("Your Favorites")
-                    .setMessage("This is the list of your favorite articles. Press the start to remove them.")
+                    .setTitle(R.string.about_fav_title)
+                    .setMessage(R.string.about_fav_content)
                     .setPositiveButton(android.R.string.ok, null)
                     .setIcon(android.R.drawable.ic_dialog_info)
                     .show();
             return true;
+        } else if(item.getItemId() == android.R.id.home) {
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

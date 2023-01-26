@@ -9,6 +9,7 @@
     <TextView
         android:id="@+id/articleTitle"
         android:text="@string/placeholder"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/favoriteButton"
@@ -19,6 +20,7 @@
     <TextView
         android:id="@+id/articleSubtitle"
         android:text="@string/placeholder"
+        android:textStyle="italic"
         app:layout_constraintTop_toBottomOf="@id/articleTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/favoriteButton"

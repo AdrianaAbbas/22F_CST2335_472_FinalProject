@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">GuardianNewsApp</string>
+    <string name="app_label">Nouvelles du gardien</string>
+    <string name="search_hint">Rechercher des actualités</string>
+    <string name="favorite_button">Bouton Favoris</string>
+    <string name="toolbar_title">Nouvelles du gardien</string>
+    <string name="search">Rechercher</string>
+    <string name="placeholder">placeholder</string>
+    <string name="search_articles">Rechercher des articles</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_articles_title">Rechercher des articles</string>
+    <string name="about_search_title">Moteur de recherche</string>
+    <string name="about_search_content">Vous avez fermé la boîte de dialogue ? Pas de soucis appuyez sur le bouton au centre !</string>
+    <string name="added_favorites">Article ajouté aux favoris !</string>
+    <string name="removed_favorites">L\'article retiré des favoris est supprimé</string>
+    <string name="undo">ANNULER</string>
+    <string name="about_main_title">Liste des nouvelles du gardien</string>
+    <string name="about_main_content">Appuyez sur le bouton Rechercher pour ouvrir l\'activité de recherche. Lorsque vous effectuez une recherche, une liste d\'articles s\'affiche ici !</string>
+    <string name="about_fav_title">Vos favoris</string>
+    <string name="about_fav_content">Ceci est la liste de vos articles préférés. Appuyez sur le démarrage pour les supprimer.</string>
+    <string name="fav_title">Vos favoris</string>
+    <string name="about_dets_title">Détails de l\'article</string>
+    <string name="about_dets_content">Appuyez sur l\'URL pour ouvrir l\'article en entier</string>
+    <string name="dets_title">Détails de l\'article</string>
+    <string name="web_url_instructions">Cliquez sur l\'url ci-dessous pour accéder à l\'article</string>
+</resources>

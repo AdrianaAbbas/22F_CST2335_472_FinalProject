@@ -1,5 +1,6 @@
 package com.adya.guardiannewsapp;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -99,7 +100,7 @@ public class NewsAdapter extends BaseAdapter {
         dBase.insertOrThrow(MyOpener.TABLE_NAME, "NullColumnName", cv);
         notifyDataSetChanged();
 
-        CharSequence text = "Article added to favourites!";
+        CharSequence text = context.getString(R.string.added_favorites);
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
@@ -116,8 +117,8 @@ public class NewsAdapter extends BaseAdapter {
 
 
         Snackbar snackbar = Snackbar
-                .make(snackBarParentView, "Article removed from favourites is deleted", Snackbar.LENGTH_LONG)
-                .setAction("UNDO", view -> addArticle(article));
+                .make(snackBarParentView, context.getString(R.string.removed_favorites), Snackbar.LENGTH_LONG)
+                .setAction(R.string.undo, view -> addArticle(article));
         snackbar.show();
     }
 
@@ -182,12 +183,16 @@ public class NewsAdapter extends BaseAdapter {
             }
         });
 
-        TemporalAccessor ta = DateTimeFormatter.ISO_INSTANT.parse(newsArticle.webPublicationDate);
-        Instant instant = Instant.from(ta);
-        Date articleDate = Date.from(instant);
-
         final TextView articleFooter = newView.findViewById(R.id.articleFooter);
-        articleFooter.setText(new SimpleDateFormat("yyyy-MM-dd").format(articleDate));
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            TemporalAccessor ta = DateTimeFormatter.ISO_INSTANT.parse(newsArticle.webPublicationDate);
+            Instant instant = Instant.from(ta);
+            Date articleDate = Date.from(instant);
+            articleFooter.setText(new SimpleDateFormat("yyyy-MM-dd").format(articleDate));
+        } else {
+            articleFooter.setText(new SimpleDateFormat("yyyy-MM-dd").format(newsArticle.webPublicationDate));
+        }
+
 
         return newView;
     }

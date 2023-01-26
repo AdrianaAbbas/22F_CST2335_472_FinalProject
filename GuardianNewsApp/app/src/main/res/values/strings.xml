@@ -7,4 +7,26 @@
     <string name="search">Search</string>
     <string name="placeholder">placeholder</string>
     <string name="search_articles">Search Articles</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_articles_title">Search Articles</string>
+    <string name="about_search_title">Search Engine</string>
+    <string name="about_search_content">You closed the prompt box? No worries press the button in the center!</string>
+    <string name="added_favorites">Article added to favourites!</string>
+    <string name="removed_favorites">Article removed from favourites is deleted</string>
+    <string name="undo">UNDO</string>
+    <string name="about_main_title">Guardian News List</string>
+    <string name="about_main_content">Press the Search button to open the search activity. When you search a list of articles will be display here!</string>
+    <string name="about_fav_title">Your Favorites</string>
+    <string name="about_fav_content">This is the list of your favorite articles. Press the start to remove them.</string>
+    <string name="fav_title">Your Favorites</string>
+    <string name="about_dets_title">Article Details</string>
+    <string name="about_dets_content">Press the Url to open up the article in full</string>
+    <string name="dets_title">Article Details</string>
+    <string name="web_url_instructions">Click the url bellow to access the article</string>
+
+    <string-array name="navigation_drawer_items_array">
+        <item>Search Articles</item>
+        <item>Your Favourites</item>
+    </string-array>
+
 </resources>
